@@ -1,0 +1,57 @@
+---
+title: "Contrôle Optimale"
+lang: fr-FR
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+
+# set directory
+proj <- normalizePath('.')
+opts_knit$set(root.dir = proj)
+
+# set chunk options
+opts_chunk$set(fig.pos = 'H')
+opts_chunk$set(comment = NA)
+opts_chunk$set(echo = FALSE)
+opts_chunk$set(include = TRUE)
+opts_chunk$set(eval = TRUE)
+#opts_chunk$set(results = 'asis')
+#opts_chunk$set(cache = TRUE)
+
+# set reticulate options
+venv <- paste(proj, "venv", sep="/")
+library(reticulate)
+#use_virtualenv(venv, required = TRUE)
+py_available(TRUE)
+```
+
+```{r child='include/math.tex'}
+```
+
+```{python}
+from __future__ import division
+
+import numpy as np
+import sympy as sp
+
+from mpl_toolkits.mplot3d import axes3d
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+from matplotlib import rc
+rcParams['savefig.transparent'] = True
+rc('text', usetex=True)
+
+from sympy import latex as tex
+def mprint(expr):
+    print(f'$${tex(expr)}$$')
+
+import warnings
+warnings.filterwarnings('ignore')
+```
+
+```{r}
+tex <- function(str) {
+    return(py$tex(str))
+}
+```

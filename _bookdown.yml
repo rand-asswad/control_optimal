@@ -1,0 +1,8 @@
+book_filename: index.rmd
+site: "bookdown::bookdown_site"
+rmd_files:
+  - main.rmd
+  - parts/1_exp.md
+  - parts/2_pmp.md
+  - parts/3_hjb.md
+delete_merged_file: true
