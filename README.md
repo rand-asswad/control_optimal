@@ -1,47 +1,76 @@
-# Documentation
+# Contrôle Optimal
 
-The documentation is built with [R Markdown](https://rmarkdown.rstudio.com/) and hosted with [Github Pages](https://pages.github.com/).
+Ce répertoire est un mini-projet de contrôle optimal
+dans le cadre de ma formation de mathématiques appliquées.
 
-R Markdown is an awesome tool that features:
-- [knitr](https://yihui.org/knitr/): an **R** engine for embedding code chunks in Markdown files.
-- [pandoc](https://pandoc.org/): a universal document convertor.
+Dans ce mini-projet, un problème de contrôle est traité
+mathématiquement dans le rapport (HTML et PDF),
+et une implémentation `python` est fournit à l'aide
+des libraires `sympy`, `numpy` et `matplotlib`.
 
-For more details, refer to [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) or [bookdown](https://bookdown.org/yihui/bookdown/).
+# Installation
+
+Télécharger/cloner le répertoire et naviguer au répertoire.
+
+```sh
+git clone https://github.com/rand-asswad/controle_optimal.git
+cd controle_optimal
+```
+
+Afin de lancer le code localement, il est recommandé
+d'installer les paquets python nécessaire dans
+un environnement virtuel.
+
+```sh
+# Créer un environnement virtuel
+python3 -m venv venv
+
+# Activer l'environnement virtuel
+source venv/bin/activate
+
+# Installer les paquets requis
+pip install -r requirements.txt
+```
+
+Lancer le programme
+```sh
+python3 main.py
+```
+
+# Rapport
+
+## R Markdown
+
+Le rapport est généré à l'aide de
+[R Markdown](https://rmarkdown.rstudio.com/)
+et hébergé sur [Github Pages](https://pages.github.com/).
+
+R Markdown est un outil génial de 
+- [knitr](https://yihui.org/knitr/): une librairie **R**
+  pour exécuter des parties du code dans les fichiers Markdown.
+- [pandoc](https://pandoc.org/): un paquet qui permet
+  de convertir des fichiers d'un format à un autre.
+
+Pour plus de détails, consulter la documentation:
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+- [bookdown](https://bookdown.org/yihui/bookdown/)
 
 ## Installation
 
-In your **R** console run the following code.
+Installer les paquets **R** localement sur la console `r`
 
 ```r
 install.packages('bookdown')
-
-# For PDF output install TinyTeX
-install.packages("tinytex")
+install.packages('tinytex')
 tinytex::install_tinytex()
 ```
 
-## Usage
+## Génération du rapport
 
 ```sh
-# Generate book.pdf (via LaTeX)
+# Générer book.pdf (via LaTeX)
 make pdf
 
-# Generate index.html
+# Générer index.html
 make html
-```
-
-## Directory Content
-
-```
-docs/
-├── img/            # Image dir
-├── include/        # TeX and HTML options
-├── parts/          # Markdown content
-├── _bookdown.yml   # bookdown options
-├── _output.yml     # rmd output options
-├── book.pdf        # PDF output
-├── index.html      # HTML output
-├── main.rmd        # main MD file
-├── Makefile
-└── README.md
 ```

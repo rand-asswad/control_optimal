@@ -22,7 +22,7 @@ opts_chunk$set(eval = TRUE)
 # set reticulate options
 venv <- paste(proj, "venv", sep="/")
 library(reticulate)
-#use_virtualenv(venv, required = TRUE)
+use_virtualenv(venv, required = TRUE)
 py_available(TRUE)
 ```
 
