@@ -1,5 +1,6 @@
 ---
 title: "Contrôle Optimale"
+author: "Rand ASSWAD<br>A l'attention de Mme. Rachida EL ASSOUDI"
 lang: fr-FR
 ---
 

@@ -38,6 +38,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Contrôle Optimale},
+  pdfauthor={Rand ASSWAD A l'attention de Mme. Rachida AL MASSOUDI},
   pdflang={fr-FR},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -162,8 +163,9 @@
 \fi
 
 \title{Contrôle Optimale}
-\author{}
-\date{\vspace{-2.5em}}
+\author{Rand ASSWAD
+A l'attention de Mme. Rachida AL MASSOUDI}
+\date{}
 
 \begin{document}
 \maketitle
@@ -526,7 +528,7 @@ On trace le champs de vecteur du système
 sur et les trajectoires bang-bang
 à l'aide de \emph{python}.
 
-\includegraphics{/mnt/my_passport/Backups/2017_11_06_2016_05_16_DELL/D/INSA/GM/GM5/control_optimal/miniprojet/book_files/figure-latex/bang_bang-1.pdf}
+\includegraphics{book_files/figure-latex/bang_bang-1.pdf}
 
 Nous cherchons alors la commande optimale \(u^*(t)\)
 à chaque instant \(t\).
@@ -576,7 +578,7 @@ pour \(\varepsilon\) suffisament petit.
 \begin{Highlighting}[]
 \ImportTok{from}\NormalTok{ control }\ImportTok{import}\NormalTok{ plot\_vector\_field, plot\_trajectory, find\_optimal}
 
-\NormalTok{u }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{{-}1}\NormalTok{]}
+\NormalTok{u }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\OperatorTok{{-}}\DecValTok{1}\NormalTok{]}
 \NormalTok{a }\OperatorTok{=} \DecValTok{1}
 \NormalTok{b }\OperatorTok{=} \DecValTok{0}
 
@@ -601,7 +603,7 @@ Optimal time: 1.6499595295863405
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{/mnt/my_passport/Backups/2017_11_06_2016_05_16_DELL/D/INSA/GM/GM5/control_optimal/miniprojet/book_files/figure-latex/optimal-1.pdf}
+\includegraphics{book_files/figure-latex/optimal-1.pdf}
 
 Vérifions si le trajectoire bang-bang qui commence par \(u(0)=-1\)
 est la trajectoire optimale.
@@ -631,7 +633,7 @@ Optimal time: 4.740854066142961
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{/mnt/my_passport/Backups/2017_11_06_2016_05_16_DELL/D/INSA/GM/GM5/control_optimal/miniprojet/book_files/figure-latex/optimal2-1.pdf}
+\includegraphics{book_files/figure-latex/optimal2-1.pdf}
 
 En effet, le trajectoire optimale est obtenu pour la commande
 \(u^*=1\) pour \(t\in[0,t_c]\) puis \(u^*=-1\) pour \(t\in[t_c,T]\)

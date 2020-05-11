@@ -52,9 +52,9 @@ def plot_vector_field(M, R=1, a_val=1, b_val=0, u_val=[1, -1], N=20,
     for ind in range(len(u_val)):
         M_val = M.subs({u:u_val[ind]})
         M_val = np.array(M_val.tolist(), dtype=float)
-        U = M_val[0, 0] * X + M_val[0, 1] * Y + M_val[0, 2] * Y
-        V = M_val[1, 0] * X + M_val[1, 1] * Y + M_val[1, 2] * Y
-        W = M_val[2, 0] * X + M_val[2, 1] * Y + M_val[2, 2] * Y
+        U = M_val[0, 0] * X + M_val[0, 1] * Y + M_val[0, 2] * Z
+        V = M_val[1, 0] * X + M_val[1, 1] * Y + M_val[1, 2] * Z
+        W = M_val[2, 0] * X + M_val[2, 1] * Y + M_val[2, 2] * Z
         ax.quiver(X, Y, Z, U, V, W, normalize=True, length=length,
                   color=ucolor[ind], **kwargs)
 
